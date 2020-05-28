@@ -6,7 +6,10 @@ import { update } from "../redux/actions";
 function Presentation(props) {
   const { input, updatePreview } = { ...props };
   return (
-    <textarea id="editor" value={input} onChange={updatePreview}></textarea>
+    <React.Fragment>
+      <h2 id="editorHead">Editor</h2>
+      <textarea id="editor" value={input} onChange={updatePreview}></textarea>
+    </React.Fragment>
   );
 }
 

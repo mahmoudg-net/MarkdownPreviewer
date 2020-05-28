@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 
 function Presentation(props) {
   const { output } = { ...props };
-  return <div id="preview" dangerouslySetInnerHTML={{ __html: output }} />;
+  return (
+    <React.Fragment>
+      <h2 id="previewHead">Preview</h2>
+      <div id="preview" dangerouslySetInnerHTML={{ __html: output }} />
+    </React.Fragment>
+  );
 }
 Presentation.propTypes = {
   output: PropTypes.string,

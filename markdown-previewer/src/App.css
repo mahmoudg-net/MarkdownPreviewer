@@ -1,19 +1,37 @@
 .App {
   width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 40px calc(100% - 40px);
 }
-
+#editorHead {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  margin: 0;
+  padding: 2px 0 3px 5px;
+  border: 1px solid black;
+  grid-area: 1/1/2/2;
+}
 #editor {
-  width: 40%;
   padding: 10px;
+  grid-area: 2/1/3/2;
+  width: 100%;
+  height: 100%;
 }
-
+#previewHead {
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  margin: 0;
+  padding: 2px 0 3px 5px;
+  border: 1px solid black;
+  grid-area: 1/2/2/3;
+}
 #preview {
-  width: 60%;
   padding: 10px;
-  background-color: lightcyan;
+  grid-area: 2/2/3/3;
 }
 
 code {
