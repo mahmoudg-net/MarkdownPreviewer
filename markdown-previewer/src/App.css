@@ -32,6 +32,7 @@
 #preview {
   padding: 10px;
   grid-area: 2/2/3/3;
+  background-color: lightcyan;
 }
 
 code {
